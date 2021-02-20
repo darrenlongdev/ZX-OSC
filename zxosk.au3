@@ -4,7 +4,7 @@
 #AutoIt3Wrapper_Res_Comment=ZX Spectrum On Screen Keyboard
 #AutoIt3Wrapper_Res_Description=On Screen Keyboard paying hommage to the Sinclair ZX Spectrum
 #AutoIt3Wrapper_Res_ProductName=ZX-OSK
-#AutoIt3Wrapper_Res_ProductVersion=1.0
+#AutoIt3Wrapper_Res_ProductVersion=1.1
 #AutoIt3Wrapper_Res_CompanyName=DarrenLongDev
 #AutoIt3Wrapper_Res_LegalCopyright=Darren Long
 #AutoIt3Wrapper_Res_LegalTradeMarks=DarrenLongDev
@@ -272,6 +272,10 @@ While 1
 				Send("{CTRLDOWN}X{CTRLUP}")
 			ElseIf $sText = "Paste" Then
 				Send("{CTRLDOWN}V{CTRLUP}")
+			ElseIf $sText = "Pg Up" Then
+				Send("{PGUP}")
+			ElseIf $sText = "Pg Dn" Then
+				Send("{PGDN}")
 			ElseIf $sText = "Beep" Then
 				Beep(1000, 500)
 			ElseIf $iCaps = 0x0 Then
@@ -322,6 +326,8 @@ While 1
 				BtnKeyAct($BtnN, "Del")
 				BtnKeyAct($BtnW, "@")
 				BtnKeyAct($BtnE, "#")
+				BtnKeyAct($BtnO, "Pg Up")
+				BtnKeyAct($BtnL, "Pg Dn")
 			Else
 				$iSym = 0x0
 				GUICtrlSetBkColor($BtnSym, $blk)
@@ -360,6 +366,8 @@ While 1
 				BtnKeyAct($BtnN, "N")
 				BtnKeyAct($BtnW, "W")
 				BtnKeyAct($BtnE, "E")
+				BtnKeyAct($BtnO, "O")
+				BtnKeyAct($BtnL, "L")
 			EndIf
 		Case $BtnCaps
 			If $iCaps = 0x0 Then
