@@ -1,4 +1,4 @@
-# ZX-OSC
+# ZX-OSK
 On Screen Keyboard paying hommage to the Sinclair ZX Spectrum
 
 Written in AutoIt, and source included here so that anyone can customise it to their needs.
